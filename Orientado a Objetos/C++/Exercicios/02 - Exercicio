@@ -1,0 +1,79 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Classe base Pessoa
+class Pessoa {
+protected:
+    string nome;
+    int idade;
+
+public:
+    // Construtor com lista de inicialização (mais eficiente)
+    Pessoa(string nome, int idade) : nome(nome), idade(idade) {}
+
+    // Método
+    void imprimirNome() {
+        cout << "O nome é: " << nome << endl;
+    }
+
+    // Método virtual para poder ser sobrescrito
+    virtual void imprimirIdade() {
+        cout << "A idade da pessoa é: " << idade << endl;
+    }
+};
+
+// Classe derivada Professor
+class Professor : public Pessoa {
+public:
+    // Chama o construtor da classe base
+    Professor(string nome, int idade) : Pessoa(nome, idade) {}
+
+    void imprimirIdade() override {
+        cout << "A idade do professor é: " << idade << endl;
+    }
+};
+
+// Classe derivada Aluno
+class Aluno : public Pessoa {
+private:
+    string matricula;
+
+public:
+    // Chama o construtor da classe base e inicializa matricula
+    Aluno(string nome, int idade, string matricula) 
+        : Pessoa(nome, idade), matricula(matricula) {}
+
+    void imprimirIdade() override {
+        cout << "A idade do aluno é: " << idade << endl;
+    }
+
+    string getMatricula() {
+        return matricula;
+    }
+};
+
+int main() {
+    // Criando objetos de cada classe
+    Pessoa pessoa("João Silva", 30);
+    Professor professor("Maria Oliveira", 45);
+    Aluno aluno("Carlos Souza", 20, "20230001");
+
+    // Chamando métodos da classe Pessoa
+    cout << "\n--- Pessoa ---" << endl;
+    pessoa.imprimirNome();
+    pessoa.imprimirIdade();
+
+    // Chamando métodos da classe Professor
+    cout << "\n--- Professor ---" << endl;
+    professor.imprimirNome();
+    professor.imprimirIdade();
+
+    // Chamando métodos da classe Aluno
+    cout << "\n--- Aluno ---" << endl;
+    aluno.imprimirNome();
+    aluno.imprimirIdade();
+    cout << "Matrícula do aluno: " << aluno.getMatricula() << endl;
+
+    return 0;
+}
