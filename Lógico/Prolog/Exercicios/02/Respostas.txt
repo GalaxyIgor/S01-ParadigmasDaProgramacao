@@ -1,0 +1,128 @@
+
+1)Pesquisar todos os filmes lançados em 2006:
+movie(Movie, 2006).
+
+2)Pesquisar todos os filmes lançados em 2001 ou antes:
+movie(Movie, Year), Year =< 2001.
+
+3)Pesquisar filmes lançados em 2000 ou 2006:
+(movie(Movie, 2000); movie(Movie, 2006)).
+
+4)Verificar se o filme "the_godfather_part_iii" foi lançado em um ano diferente de 1990:
+movie(the_godfather_part_iii, Year), Year \= 1990.
+
+Respostas:
+
+1)movie(Movie, 2006).
+Movie = hail_caesar
+Movie = marie_antoinette
+Movie = paris_je_t_aime
+Movie = the_black_dahlia
+Movie = untitled_woody_allen_fall_project_2006
+Movie = a_view_from_the_bridge
+
+2)movie(Movie, Year), Year =< 2001.
+Movie = american_beauty,
+Year = 1999
+Movie = anna,
+Year = 1987
+Movie = barton_fink,
+Year = 1991
+Movie = the_big_lebowski,
+Year = 1998
+Movie = blade_runner,
+Year = 1997
+Movie = blood_simple,
+Year = 1984
+Movie = the_cotton_club,
+Year = 1984
+Movie = cq,
+Year = 2001
+Movie = crimewave,
+Year = 1985
+Movie = down_from_the_mountain,
+Year = 2000
+Movie = fargo,
+Year = 1996
+Movie = the_firm,
+Year = 1993
+Movie = frankenweenie,
+Year = 1984
+Movie = ghost_busters,
+Year = 1984
+Movie = the_godfather,
+Year = 1972
+Movie = the_godfather_part_ii,
+Year = 1974
+Movie = the_godfather_part_iii,
+Year = 1990
+Movie = groundhog_day,
+Year = 1993
+Movie = hearts_of_darkness_a_filmmaker_s_apocalypse,
+Year = 1991
+Movie = the_hudsucker_proxy,
+Year = 1994
+Movie = inside_monkey_zetterland,
+Year = 1992
+Movie = lick_the_star,
+Year = 1998
+Movie = the_man_who_wasn_t_there,
+Year = 2001
+Movie = miller_s_crossing,
+Year = 1990
+Movie = mission_impossible,
+Year = 1996
+Movie = o_brother_where_art_thou,
+Year = 2000
+Movie = the_outsiders,
+Year = 1983
+Movie = peggy_sue_got_married,
+Year = 1986
+Movie = raising_arizona,
+Year = 1987
+Movie = rumble_fish,
+Year = 1983
+Movie = spies_like_us,
+Year = 1985
+Movie = star_wars_episode_i__the_phantom_menace,
+Year = 1999
+Movie = torrance_rises,
+Year = 1999
+Movie = the_usual_suspects,
+Year = 1995
+Movie = the_virgin_suicides,
+Year = 1999
+Movie = an_american_rhapsody,
+Year = 2001
+Movie = fall,
+Year = 1997
+Movie = ghost_world,
+Year = 2000
+Movie = if_lucy_fell,
+Year = 1996
+Movie = home_alone_3,
+Year = 1997
+Movie = the_horse_whisperer,
+Year = 1998
+Movie = just_cause,
+Year = 1995
+Movie = manny__lo,
+Year = 1996
+Movie = my_brother_the_pig,
+Year = 1999
+Movie = north,
+Year = 1994
+
+3)(movie(Movie, 2000); movie(Movie, 2006)).
+Movie = down_from_the_mountain
+Movie = o_brother_where_art_thou
+Movie = ghost_world
+Movie = hail_caesar
+Movie = marie_antoinette
+Movie = paris_je_t_aime
+Movie = the_black_dahlia
+Movie = untitled_woody_allen_fall_project_2006
+Movie = a_view_from_the_bridge
+
+4)movie(the_godfather_part_iii, Year), Year \= 1990.
+false
