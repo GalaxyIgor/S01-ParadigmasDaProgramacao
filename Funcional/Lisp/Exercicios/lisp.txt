@@ -1,0 +1,10 @@
+(defun processa-elemento (elemento)
+  (if (>= elemento 4)
+      (* elemento 2)
+      (/ elemento 2.0)))
+
+(defun solucao ()
+  (append (mapcar #'processa-elemento '(1 2 3))
+          (mapcar #'processa-elemento '(4 5 6))))
+
+(print (solucao))
